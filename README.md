@@ -1,43 +1,73 @@
 ```mermaid
 flowchart LR
 
-%% ---- Critical Path ----
-1["1 Clear Site (70d)"] --> 4["4 Drive Piling (120d)"] --> 5["5 Lower Bowl (120d)"] --> 6["6 Main Concourse (120d)"] --> 8["8 Upper Steel Bowl (120d)"] --> 9["9 Install Seats (140d)"] --> 13["13 Steel Canopy (75d)"] --> 14["14 Light Installation (30d)"] --> 19["19 Inspection (20d)"] --> 20["20 Cleanup (21d)"]
+%% ---- Nodes ----
+A1["1 Clear Stadium Site (70d)"]
+A2["2 Demolish Existing Building (30d)"]
+A3["3 Set Up Construction Site (70d)"]
+A4["4 Drive Support Piling (120d)"]
+A5["5 Pour Lower Concrete Bowl (120d)"]
+A6["6 Pour Main Concourse (120d)"]
+A7["7 Install Playing Field (90d)"]
+A8["8 Construct Upper Steel Bowl (120d)"]
+A9["9 Install Seats (140d)"]
+A10["10 Build Luxury Boxes (90d)"]
+A11["11 Install Jumbotron (30d)"]
+A12["12 Stadium Infrastructure (120d)"]
+A13["13 Construct Steel Canopy (75d)"]
+A14["14 Light Installation (30d)"]
+A15["15 Build Roof Supports (90d)"]
+A16["16 Construct Roof (180d)"]
+A17["17 Install Roof Tracks (90d)"]
+A18["18 Install Roof (90d)"]
+A19["19 Inspection (20d)"]
+A20["20 Cleanup (21d)"]
 
-%% ---- Side Tasks ----
-1 --> 2["2 Demolish (30d)"]
-2 --> 3["3 Setup Site (70d)"]
-3 --> 7["7 Playing Field (90d)"]
-5 --> 7
-6 --> 10["10 Luxury Boxes (90d)"]
-8 --> 10
-6 --> 11["11 Jumbotron (30d)"]
-8 --> 11
-6 --> 12["12 Infrastructure (120d)"]
-8 --> 12
-5 --> 15["15 Roof Supports (90d)"]
-15 --> 16["16 Construct Roof (180d)"]
-15 --> 17["17 Roof Tracks (90d)"]
-16 --> 18["18 Install Roof (90d)"]
-17 --> 18
-7 --> 19
-10 --> 19
-11 --> 19
-12 --> 19
-14 --> 19
-18 --> 19
+%% ---- Dependencies ----
+A1 --> A2
+A1 --> A4
+A2 --> A3
+A4 --> A5
+A3 --> A6
+A5 --> A6
+A3 --> A7
+A5 --> A7
+A3 --> A8
+A5 --> A8
+A6 --> A9
+A8 --> A9
+A6 --> A10
+A8 --> A10
+A6 --> A11
+A8 --> A11
+A6 --> A12
+A8 --> A12
+A5 --> A15
+A15 --> A16
+A15 --> A17
+A16 --> A18
+A17 --> A18
+A9 --> A13
+A13 --> A14
+A7 --> A19
+A10 --> A19
+A11 --> A19
+A12 --> A19
+A14 --> A19
+A18 --> A19
+A19 --> A20
 
 %% ---- Highlight Critical Path ----
-style 1 fill:#ff4d4d,color:#fff
-style 4 fill:#ff4d4d,color:#fff
-style 5 fill:#ff4d4d,color:#fff
-style 6 fill:#ff4d4d,color:#fff
-style 8 fill:#ff4d4d,color:#fff
-style 9 fill:#ff4d4d,color:#fff
-style 13 fill:#ff4d4d,color:#fff
-style 14 fill:#ff4d4d,color:#fff
-style 19 fill:#ff4d4d,color:#fff
-style 20 fill:#ff4d4d,color:#fff
+style A1 fill:#ff4d4d,color:#fff
+style A4 fill:#ff4d4d,color:#fff
+style A5 fill:#ff4d4d,color:#fff
+style A6 fill:#ff4d4d,color:#fff
+style A8 fill:#ff4d4d,color:#fff
+style A9 fill:#ff4d4d,color:#fff
+style A13 fill:#ff4d4d,color:#fff
+style A14 fill:#ff4d4d,color:#fff
+style A19 fill:#ff4d4d,color:#fff
+style A20 fill:#ff4d4d,color:#fff
 ```
 
 # sanjana
