@@ -1,85 +1,73 @@
 ```mermaid
 flowchart LR
 
-%% ---- LEVEL 1 ----
-A1["1 Clear Site (70d)"] 
-
-%% ---- LEVEL 2 ----
-A2["2 Demolish (30d)"]
-A4["4 Drive Piling (120d)"]
-
-%% ---- LEVEL 3 ----
-A3["3 Setup Site (70d)"]
-A5["5 Lower Bowl (120d)"]
-
-%% ---- LEVEL 4 ----
-A6["6 Main Concourse (120d)"]
-A7["7 Playing Field (90d)"]
-A8["8 Upper Steel Bowl (120d)"]
-A15["15 Roof Supports (90d)"]
-
-%% ---- LEVEL 5 ----
-A9["9 Install Seats (140d)"]
-A10["10 Luxury Boxes (90d)"]
-A11["11 Jumbotron (30d)"]
-A12["12 Infrastructure (120d)"]
-A16["16 Construct Roof (180d)"]
-A17["17 Roof Tracks (90d)"]
-
-%% ---- LEVEL 6 ----
-A13["13 Steel Canopy (75d)"]
-A18["18 Install Roof (90d)"]
-
-%% ---- LEVEL 7 ----
-A14["14 Light Installation (30d)"]
-
-%% ---- LEVEL 8 ----
-A19["19 Inspection (20d)"]
-A20["20 Cleanup (21d)"]
+%% ---- Nodes ----
+1["1 Clear Site (70d)"]
+2["2 Demolish (30d)"]
+3["3 Setup Site (70d)"]
+4["4 Drive Piling (120d)"]
+5["5 Lower Bowl (120d)"]
+6["6 Main Concourse (120d)"]
+7["7 Playing Field (90d)"]
+8["8 Upper Steel Bowl (120d)"]
+9["9 Install Seats (140d)"]
+10["10 Luxury Boxes (90d)"]
+11["11 Jumbotron (30d)"]
+12["12 Infrastructure (120d)"]
+13["13 Steel Canopy (75d)"]
+14["14 Light Installation (30d)"]
+15["15 Roof Supports (90d)"]
+16["16 Construct Roof (180d)"]
+17["17 Roof Tracks (90d)"]
+18["18 Install Roof (90d)"]
+19["19 Inspection (20d)"]
+20["20 Cleanup (21d)"]
 
 %% ---- Dependencies ----
-A1 --> A2
-A1 --> A4
-A2 --> A3
-A4 --> A5
-A3 --> A6
-A3 --> A8
-A3 --> A7
-A5 --> A6
-A5 --> A8
-A5 --> A15
-A6 --> A9
-A6 --> A10
-A6 --> A11
-A6 --> A12
-A8 --> A9
-A8 --> A10
-A8 --> A11
-A8 --> A12
-A15 --> A16
-A15 --> A17
-A16 --> A18
-A17 --> A18
-A9 --> A13
-A13 --> A14
-A14 --> A19
-A7 --> A19
-A10 --> A19
-A11 --> A19
-A12 --> A19
-A18 --> A19
-A19 --> A20
+1 --> 2
+1 --> 4
+2 --> 3
+4 --> 5
+3 --> 6
+5 --> 6
+3 --> 7
+5 --> 7
+3 --> 8
+5 --> 8
+6 --> 9
+8 --> 9
+6 --> 10
+8 --> 10
+6 --> 11
+8 --> 11
+6 --> 12
+8 --> 12
+5 --> 15
+15 --> 16
+15 --> 17
+16 --> 18
+17 --> 18
+9 --> 13
+13 --> 14
+7 --> 19
+10 --> 19
+11 --> 19
+12 --> 19
+14 --> 19
+18 --> 19
+19 --> 20
 
-%% ---- Critical Path Styling ----
-style A1 fill:#ff4d4d,color:#fff
-style A4 fill:#ff4d4d,color:#fff
-style A5 fill:#ff4d4d,color:#fff
-style A6 fill:#ff4d4d,color:#fff
-style A8 fill:#ff4d4d,color:#fff
-style A9 fill:#ff4d4d,color:#fff
-style A13 fill:#ff4d4d,color:#fff
-style A14 fill:#ff4d4d,color:#fff
-style A19 fill:#ff4d4d,color:#fff
-style A20 fill:#ff4d4d,color:#fff
+%% ---- Highlight Critical Path ----
+style 1 fill:#ff4d4d,color:#fff
+style 4 fill:#ff4d4d,color:#fff
+style 5 fill:#ff4d4d,color:#fff
+style 6 fill:#ff4d4d,color:#fff
+style 8 fill:#ff4d4d,color:#fff
+style 9 fill:#ff4d4d,color:#fff
+style 13 fill:#ff4d4d,color:#fff
+style 14 fill:#ff4d4d,color:#fff
+style 19 fill:#ff4d4d,color:#fff
+style 20 fill:#ff4d4d,color:#fff
 ```
+
 # sanjana
