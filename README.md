@@ -1,29 +1,58 @@
-```mermaid
-flowchart LR
+flowchart TD
 
-%% ---- Nodes ----
-A1["1 Clear Stadium Site (70d)"]
-A2["2 Demolish Existing Building (30d)"]
-A3["3 Set Up Construction Site (70d)"]
-A4["4 Drive Support Piling (120d)"]
-A5["5 Pour Lower Concrete Bowl (120d)"]
-A6["6 Pour Main Concourse (120d)"]
-A7["7 Install Playing Field (90d)"]
-A8["8 Construct Upper Steel Bowl (120d)"]
-A9["9 Install Seats (140d)"]
-A10["10 Build Luxury Boxes (90d)"]
-A11["11 Install Jumbotron (30d)"]
-A12["12 Stadium Infrastructure (120d)"]
-A13["13 Construct Steel Canopy (75d)"]
-A14["14 Light Installation (30d)"]
-A15["15 Build Roof Supports (90d)"]
-A16["16 Construct Roof (180d)"]
-A17["17 Install Roof Tracks (90d)"]
-A18["18 Install Roof (90d)"]
-A19["19 Inspection (20d)"]
-A20["20 Cleanup (21d)"]
+%% ---- LEVEL 1 ----
+subgraph Level1["Start"]
+A1["1 Clear Stadium Site\n70d"]
+end
 
-%% ---- Dependencies ----
+%% ---- LEVEL 2 ----
+subgraph Level2["Initial Work"]
+A2["2 Demolish Existing Building\n30d"]
+A4["4 Drive Support Piling\n120d"]
+end
+
+%% ---- LEVEL 3 ----
+subgraph Level3["Setup & Prep"]
+A3["3 Set Up Construction Site\n70d"]
+A5["5 Pour Lower Concrete Bowl\n120d"]
+end
+
+%% ---- LEVEL 4 ----
+subgraph Level4["Main Construction"]
+A6["6 Pour Main Concourse\n120d"]
+A7["7 Install Playing Field\n90d"]
+A8["8 Construct Upper Steel Bowl\n120d"]
+A15["15 Build Roof Supports\n90d"]
+end
+
+%% ---- LEVEL 5 ----
+subgraph Level5["Secondary Tasks"]
+A9["9 Install Seats\n140d"]
+A10["10 Build Luxury Boxes\n90d"]
+A11["11 Install Jumbotron\n30d"]
+A12["12 Stadium Infrastructure\n120d"]
+A16["16 Construct Roof\n180d"]
+A17["17 Install Roof Tracks\n90d"]
+end
+
+%% ---- LEVEL 6 ----
+subgraph Level6["Final Construction"]
+A13["13 Construct Steel Canopy\n75d"]
+A18["18 Install Roof\n90d"]
+end
+
+%% ---- LEVEL 7 ----
+subgraph Level7["Finishing"]
+A14["14 Light Installation\n30d"]
+end
+
+%% ---- LEVEL 8 ----
+subgraph Level8["Inspection & Cleanup"]
+A19["19 Inspection\n20d"]
+A20["20 Cleanup\n21d"]
+end
+
+%% ---- DEPENDENCIES ----
 A1 --> A2
 A1 --> A4
 A2 --> A3
@@ -57,7 +86,7 @@ A14 --> A19
 A18 --> A19
 A19 --> A20
 
-%% ---- Highlight Critical Path ----
+%% ---- HIGHLIGHT CRITICAL PATH ----
 style A1 fill:#ff4d4d,color:#fff
 style A4 fill:#ff4d4d,color:#fff
 style A5 fill:#ff4d4d,color:#fff
@@ -68,6 +97,5 @@ style A13 fill:#ff4d4d,color:#fff
 style A14 fill:#ff4d4d,color:#fff
 style A19 fill:#ff4d4d,color:#fff
 style A20 fill:#ff4d4d,color:#fff
-```
 
 # sanjana
