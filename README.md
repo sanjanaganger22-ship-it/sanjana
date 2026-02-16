@@ -5,12 +5,27 @@ flowchart LR
 1["1 Clear Site (70d)"] --> 4["4 Drive Piling (120d)"] --> 5["5 Lower Bowl (120d)"] --> 6["6 Main Concourse (120d)"] --> 8["8 Upper Steel Bowl (120d)"] --> 9["9 Install Seats (140d)"] --> 13["13 Steel Canopy (75d)"] --> 14["14 Light Installation (30d)"] --> 19["19 Inspection (20d)"] --> 20["20 Cleanup (21d)"]
 
 %% ---- Side Tasks ----
-2["2 Demolish (30d)"] --> 3["3 Setup Site (70d)"] --> 7["7 Playing Field (90d)"] --> 19
-6 --> 10["10 Luxury Boxes (90d)"] --> 19
-6 --> 11["11 Jumbotron (30d)"] --> 19
-6 --> 12["12 Infrastructure (120d)"] --> 19
-5 --> 15["15 Roof Supports (90d)"] --> 16["16 Construct Roof (180d)"] --> 18["18 Install Roof (90d)"] --> 19
-15 --> 17["17 Roof Tracks (90d)"] --> 18
+1 --> 2["2 Demolish (30d)"]
+2 --> 3["3 Setup Site (70d)"]
+3 --> 7["7 Playing Field (90d)"]
+5 --> 7
+6 --> 10["10 Luxury Boxes (90d)"]
+8 --> 10
+6 --> 11["11 Jumbotron (30d)"]
+8 --> 11
+6 --> 12["12 Infrastructure (120d)"]
+8 --> 12
+5 --> 15["15 Roof Supports (90d)"]
+15 --> 16["16 Construct Roof (180d)"]
+15 --> 17["17 Roof Tracks (90d)"]
+16 --> 18["18 Install Roof (90d)"]
+17 --> 18
+7 --> 19
+10 --> 19
+11 --> 19
+12 --> 19
+14 --> 19
+18 --> 19
 
 %% ---- Highlight Critical Path ----
 style 1 fill:#ff4d4d,color:#fff
