@@ -1,4 +1,5 @@
-flowchart LR
+```mermaid
+flowchart TD
 
 A1["1 Clear Stadium Site (70d)"] --> A2["2 Demolish Existing Building (30d)"]
 A1 --> A4["4 Drive Support Piling (120d)"]
@@ -44,5 +45,5 @@ style A13 fill:#ff4d4d,color:#fff
 style A14 fill:#ff4d4d,color:#fff
 style A19 fill:#ff4d4d,color:#fff
 style A20 fill:#ff4d4d,color:#fff
-
+```
 # sanjana
