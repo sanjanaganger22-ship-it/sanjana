@@ -1,4 +1,4 @@
-flowchart LR
+flowchart TD
 
 %% ---- Nodes ----
 A1["1 Clear Stadium Site (70d)"]
@@ -35,12 +35,12 @@ A3 --> A8
 A5 --> A8
 A6 --> A9
 A8 --> A9
-A6 -.-> A10
-A8 -.-> A10
-A6 -.-> A11
-A8 -.-> A11
-A6 -.-> A12
-A8 -.-> A12
+A6 --> A10
+A8 --> A10
+A6 --> A11
+A8 --> A11
+A6 --> A12
+A8 --> A12
 A5 --> A15
 A15 --> A16
 A15 --> A17
