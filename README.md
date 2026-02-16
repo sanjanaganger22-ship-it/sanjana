@@ -1,5 +1,5 @@
 ```mermaid
-flowchart TD
+flowchart LR
 
 A1["1 Clear Stadium Site (70d)"] --> A2["2 Demolish Existing Building (30d)"]
 A1 --> A4["4 Drive Support Piling (120d)"]
